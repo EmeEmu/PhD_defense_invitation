@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soutenance de thèse — Mattéo Dommanget‑Kott</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Leaflet (OpenStreetMap) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <!-- Add to Calendar Button -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2"></script>
+  <meta name="color-scheme" content="dark light">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div>
+        <div class="subtitle">Soutenance de thèse</div>
+        <h1>Mattéo Dommanget‑Kott</h1>
+      </div>
+      <nav class="lang-switch">
+        <a class="alt" href="en.html" aria-label="View in English">English</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="subtitle">Titre</div>
+      <h2 class="subtitle" style="font-size:18px; color:#e8e9ee; margin:4px 0 10px;">
+        Développement de Machines de Boltzmann restreintes comme modèles génériques, génératifs et interprétables du cerveau de la larve de poisson zèbre.
+      </h2>
+      <div class="meta">
+        <span class="tag">16 octobre 2025, 10h00</span>
+        <span class="tag">Amphithéâtre Charpak, Campus Jussieu</span>
+        <span class="tag">Paris, France</span>
+      </div>
+
+      <div style="margin-top:14px">
+        <!-- Bouton d'ajout au calendrier (l’URL de la page est ajoutée par le script ci‑dessous) -->
+        <add-to-calendar-button 
+          name="Soutenance — Mattéo Dommanget‑Kott"
+          description="Soutenance de thèse à l’Amphithéâtre Charpak, Campus Jussieu. Accès : Métro lignes 7 ou 10 (Jussieu), puis tour 32, descendre d’un niveau (RC/Saint‑Bernard) et suivre la signalétique Charpak. Détails : {PAGE_URL}"
+          startDate="2025-10-16"
+          startTime="10:00"
+          endTime="13:00"
+          timeZone="Europe/Paris"
+          location="48.847901, 2.356584"
+          options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+          language="fr"
+        ></add-to-calendar-button>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Comment venir&nbsp;?</h2>
+      <div class="grid-2">
+        <div>
+          <p><strong>Adresse.</strong> 4 Place Jussieu, 75005 Paris, France</p>
+          <p><strong>Métro.</strong> Lignes 7 ou 10, station <em>Jussieu</em>.</p>
+          <p><strong>À pied.</strong> Rejoindre la tour 32, descendre d’un niveau au <em>RC/Saint‑Bernard</em>, puis suivre la signalétique <em>Charpak</em>.</p>
+          <div id="map" role="region" aria-label="Carte pour l’amphithéâtre Charpak"></div>
+        </div>
+        <div class="img-card">
+          <img src="assets/charpak.png" alt="Cheminement à l’intérieur de Jussieu vers l’amphithéâtre Charpak">
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Informations pratiques</h2>
+      <p><strong>Langue.</strong> La soutenance se fera en anglais.</p>
+      <p><strong>Durée.</strong> Environ 3&nbsp;heures (45&nbsp;min de présentation + 1–2&nbsp;heures de questions).</p>
+      <p><strong>Pot.</strong> Un pot sera offert après la soutenance.</p>
+    </section>
+
+    <section class="block">
+      <h2>FAQ</h2>
+      <dl class="faq">
+        <dt>Puis‑je suivre la soutenance en ligne&nbsp;?</dt>
+        <dd>Oui, il y aura un lien Zoom. Nous l’ajouterons ici dès qu’il sera disponible.</dd>
+        <dt>Je n’ai jamais assisté à une soutenance, comment ça se passe&nbsp;?</dt>
+        <dd>Évènement public et ouvert&nbsp;: ~45&nbsp;min de présentation par le candidat, puis 1–2&nbsp;heures de questions par le jury. Vous pouvez assister librement et sortir discrètement si besoin. Aucun prérequis n’est nécessaire.</dd>
+      </dl>
+    </section>
+
+    <section class="block">
+      <div class="abstract-wrap">
+        <h2>Résumé</h2>
+        <button class="btn" id="toggle-abs-fr" type="button">Afficher le résumé</button>
+      </div>
+      <div id="abstract-fr" class="abstract">
+        <p>Une question centrale en neurosciences est de comprendre comment l’activité cérébrale se généralise d’un individu à l’autre. Les paradigmes classiques basés sur des tâches ou des stimuli s’appuient sur l’alignement anatomique et temporel des enregistrements cérébraux, ainsi que sur le moyennage des données. Ces stratégies se révèlent toutefois inefficaces pour étudier l’activité cérébrale spontanée, car aucun repère temporel commun ne relie les individus. Dans cette thèse, nous proposons des modèles statistiques permettant de comparer l’activité neuronale spontanée chez la larve de poisson‑zèbre. À l’aide de la microscopie fonctionnelle à feuille de lumière, nous enregistrons l’activité de l’ensemble du cerveau à résolution cellulaire et nous utilisons des Modèles de Markov ainsi que des Machines de Boltzmann Restreintes (Restricted Boltzmann Machines, RBM) pour générer des représentations interprétables du comportement et des dynamiques neuronales.</p>
+        <p>Nous commençons par modéliser la dynamique de réorientation de la larve de poisson‑zèbre pendant la nage libre avec un Modèle de Markov caché (Hidden Markov Model, HMM) à trois états moteurs&nbsp;: avant, gauche et droite. Ce même HMM décrit l’activité de la région ARTR (Anterior Rhombencephalic Turning Region) et relie directement la dynamique neuronale au comportement. Nos résultats suggèrent qu’une activation bilatérale équilibrée de l’ARTR pourrait expliquer l’état «&nbsp;avant&nbsp;».</p>
+        <p>Nous développons ensuite deux procédures pour entraîner des RBM capables de projeter l’activité neuronale de plusieurs poissons dans un espace latent commun. La première entraîne une RBM unique à partir de l’activité voxelisée et concaténée de plusieurs poissons. La seconde est un paradigme «&nbsp;enseignant‑élève&nbsp;» où chaque RBM est entraînée sur un poisson unique, mais contrainte de partager ses unités cachées avec les autres. Ces approches produisent une représentation commune qui permet de transférer fidèlement des motifs d’activité d’un individu à l’autre et révèle des régularités conservées entre cerveaux.</p>
+        <p>Nous exploitons enfin cet espace latent pour segmenter l’activité spontanée en états cérébraux discrets et mesurer leurs transitions markoviennes. Nous constatons que les séquences d’états suivent des règles stéréotypées d’un animal à l’autre, ce qui confirme que l’activité spontanée encode des «&nbsp;priors&nbsp;» intrinsèques du calcul neural. En conclusion, nos résultats montrent comment des modèles génératifs probabilistes peuvent surmonter la variabilité individuelle et révéler des principes d’organisation communs entre cerveaux chez les vertébrés. La thèse fournit une boîte à outils pour comparer l’activité spontanée entre sujets et souligne la valeur interprétative des RBM et des HMM.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Insérer l’URL courante dans la description du calendrier
+    const atcb = document.querySelector('add-to-calendar-button');
+    if (atcb){
+      const url = window.location.href;
+      atcb.setAttribute('description', atcb.getAttribute('description').replace('{PAGE_URL}', url));
+    }
+
+    // Carte Leaflet
+    const lat = 48.847889, lon = 2.3565;
+    const map = L.map('map').setView([lat, lon], 16);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup('Amphithéâtre Charpak').openPopup();
+
+    // Bascule du résumé
+    const btnFr = document.getElementById('toggle-abs-fr');
+    const absFr = document.getElementById('abstract-fr');
+    btnFr.addEventListener('click', () => {
+      absFr.classList.toggle('show');
+      btnFr.textContent = absFr.classList.contains('show') ? 'Masquer le résumé' : 'Afficher le résumé';
+    });
+  </script>
+</body>
+</html>
