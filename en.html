@@ -39,12 +39,12 @@
         <!-- Calendar button (the page URL is appended by script below) -->
         <add-to-calendar-button 
           name="PhD Defense — Mattéo Dommanget‑Kott"
-          description="PhD defense at Amphithéâtre Charpak, Campus Jussieu. Getting there: Metro lines 7 or 10 (Jussieu), then head to tower 32, go down one level to RC/Saint‑Bernard and follow the Charpak signs. Details: {PAGE_URL}"
+          description="PhD defense at Amphithéâtre Charpak, Campus Jussieu. Getting there: Metro lines 7 or 10 (Jussieu), then head to tower 22, go down one level to RC/Saint‑Bernard and follow the Charpak signs. Details: {PAGE_URL}"
           startDate="2025-10-16"
           startTime="10:00"
           endTime="13:00"
           timeZone="Europe/Paris"
-          location="48.847901, 2.356584"
+          location="48.848065, 2.356327"
           options="'Apple','Google','iCal','Outlook.com','Yahoo'"
         ></add-to-calendar-button>
       </div>
@@ -56,7 +56,7 @@
         <div>
           <p><strong>Address.</strong> 4 Place Jussieu, 75005 Paris, France</p>
           <p><strong>Metro.</strong> Lines 7 or 10, station <em>Jussieu</em>.</p>
-          <p><strong>On foot.</strong> Walk to tower 32, go down one level to <em>RC/Saint‑Bernard</em>, follow the <em>Charpak</em> signs.</p>
+          <p><strong>On foot.</strong> Walk to tower 22, go down one level to <em>RC/Saint‑Bernard</em>, follow the <em>Charpak</em> signs.</p>
           <div id="map" role="region" aria-label="Map to the Charpak amphitheater"></div>
         </div>
         <div class="img-card">
@@ -88,7 +88,12 @@
         <button class="btn" id="toggle-abs-en" type="button">Show abstract</button>
       </div>
       <div id="abstract-en" class="abstract">
-        <p><em>Abstract coming soon.</em> Add your English abstract by editing <code>en.html</code> (search for <code>id="abstract-en"</code>).</p>
+        <p>Understanding how brain activity generalises across individuals remains a central challenge in neuroscience. Classical task- or stimulus-driven paradigms align recordings by trial-averaging and registration, but these techniques break down for spontaneous activity, where no common temporal reference exists.</p>
+        <p>This thesis develops statistical frameworks that enable direct, cross-individual comparison of spontaneous activity in larval zebrafish. Leveraging whole-brain, single-cell calcium imaging acquired with light-sheet functional microscopy, we use Markov Models and Restricted Boltzmann Machines (RBMs) to build generative, interpretable representations of behavior and neural activity.</p>
+        <p>First, we characterize spontaneous swimming reorientation with a Hidden Markov Model (HMM) comprising forward, left, and right motor states. The same 3-state architecture also captures the activity of the Anterior Rhombencephalic Turning Region (ARTR), linking neural dynamics to behavior and suggesting that balanced bilateral ARTR activity mediates the forward state.</p>
+        <p>Next, we introduce two strategies for training RBMs that embed the neural activity of multiple fish into a common latent space. A voxel-based approach trains a single RBM on pooled recordings, while a teacher-student paradigm constrains individual-fish RBMs to shared hidden units. The shared representation allows realistic activity patterns to be transferred between animals, demonstrating that the model captures generic structures conserved across brains.</p>
+        <p>Finally, we exploit the common latent space to segment spontaneous activity into discrete brain states and quantify their Markovian transition statistics. We find that state-to-state dynamics are remarkably stereotyped across individuals, supporting the hypothesis that spontaneous activity reflects intrinsic priors of neural computation</p>
+        <p>In conclusion, our results show how probabilistic generative models can bridge individual variability and reveal shared organisational principles of vertebrate brains. The thesis provides a toolbox for cross-subject comparison of spontaneous activity, and underscores the biological interpretability of probabilistic models.</p>
       </div>
     </section>
 
@@ -103,7 +108,7 @@
     }
 
     // Leaflet map
-    const lat = 48.847889, lon = 2.3565;
+    const lat = 48.848022, lon = 2.356315;
     const map = L.map('map').setView([lat, lon], 16);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,

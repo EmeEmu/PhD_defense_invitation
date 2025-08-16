@@ -39,12 +39,12 @@
         <!-- Bouton d'ajout au calendrier (l’URL de la page est ajoutée par le script ci‑dessous) -->
         <add-to-calendar-button 
           name="Soutenance — Mattéo Dommanget‑Kott"
-          description="Soutenance de thèse à l’Amphithéâtre Charpak, Campus Jussieu. Accès : Métro lignes 7 ou 10 (Jussieu), puis tour 32, descendre d’un niveau (RC/Saint‑Bernard) et suivre la signalétique Charpak. Détails : {PAGE_URL}"
+          description="Soutenance de thèse à l’Amphithéâtre Charpak, Campus Jussieu. Accès : Métro lignes 7 ou 10 (Jussieu), puis tour 22, descendre d’un niveau (RC/Saint‑Bernard) et suivre la signalétique Charpak. Détails : {PAGE_URL}"
           startDate="2025-10-16"
           startTime="10:00"
           endTime="13:00"
           timeZone="Europe/Paris"
-          location="48.847901, 2.356584"
+          location="48.848065, 2.356327"
           options="'Apple','Google','iCal','Outlook.com','Yahoo'"
           language="fr"
         ></add-to-calendar-button>
@@ -57,7 +57,7 @@
         <div>
           <p><strong>Adresse.</strong> 4 Place Jussieu, 75005 Paris, France</p>
           <p><strong>Métro.</strong> Lignes 7 ou 10, station <em>Jussieu</em>.</p>
-          <p><strong>À pied.</strong> Rejoindre la tour 32, descendre d’un niveau au <em>RC/Saint‑Bernard</em>, puis suivre la signalétique <em>Charpak</em>.</p>
+          <p><strong>À pied.</strong> Rejoindre la tour 22, descendre d’un niveau au <em>RC/Saint‑Bernard</em>, puis suivre la signalétique <em>Charpak</em>.</p>
           <div id="map" role="region" aria-label="Carte pour l’amphithéâtre Charpak"></div>
         </div>
         <div class="img-card">
@@ -89,10 +89,12 @@
         <button class="btn" id="toggle-abs-fr" type="button">Afficher le résumé</button>
       </div>
       <div id="abstract-fr" class="abstract">
-        <p>Une question centrale en neurosciences est de comprendre comment l’activité cérébrale se généralise d’un individu à l’autre. Les paradigmes classiques basés sur des tâches ou des stimuli s’appuient sur l’alignement anatomique et temporel des enregistrements cérébraux, ainsi que sur le moyennage des données. Ces stratégies se révèlent toutefois inefficaces pour étudier l’activité cérébrale spontanée, car aucun repère temporel commun ne relie les individus. Dans cette thèse, nous proposons des modèles statistiques permettant de comparer l’activité neuronale spontanée chez la larve de poisson‑zèbre. À l’aide de la microscopie fonctionnelle à feuille de lumière, nous enregistrons l’activité de l’ensemble du cerveau à résolution cellulaire et nous utilisons des Modèles de Markov ainsi que des Machines de Boltzmann Restreintes (Restricted Boltzmann Machines, RBM) pour générer des représentations interprétables du comportement et des dynamiques neuronales.</p>
-        <p>Nous commençons par modéliser la dynamique de réorientation de la larve de poisson‑zèbre pendant la nage libre avec un Modèle de Markov caché (Hidden Markov Model, HMM) à trois états moteurs&nbsp;: avant, gauche et droite. Ce même HMM décrit l’activité de la région ARTR (Anterior Rhombencephalic Turning Region) et relie directement la dynamique neuronale au comportement. Nos résultats suggèrent qu’une activation bilatérale équilibrée de l’ARTR pourrait expliquer l’état «&nbsp;avant&nbsp;».</p>
-        <p>Nous développons ensuite deux procédures pour entraîner des RBM capables de projeter l’activité neuronale de plusieurs poissons dans un espace latent commun. La première entraîne une RBM unique à partir de l’activité voxelisée et concaténée de plusieurs poissons. La seconde est un paradigme «&nbsp;enseignant‑élève&nbsp;» où chaque RBM est entraînée sur un poisson unique, mais contrainte de partager ses unités cachées avec les autres. Ces approches produisent une représentation commune qui permet de transférer fidèlement des motifs d’activité d’un individu à l’autre et révèle des régularités conservées entre cerveaux.</p>
-        <p>Nous exploitons enfin cet espace latent pour segmenter l’activité spontanée en états cérébraux discrets et mesurer leurs transitions markoviennes. Nous constatons que les séquences d’états suivent des règles stéréotypées d’un animal à l’autre, ce qui confirme que l’activité spontanée encode des «&nbsp;priors&nbsp;» intrinsèques du calcul neural. En conclusion, nos résultats montrent comment des modèles génératifs probabilistes peuvent surmonter la variabilité individuelle et révéler des principes d’organisation communs entre cerveaux chez les vertébrés. La thèse fournit une boîte à outils pour comparer l’activité spontanée entre sujets et souligne la valeur interprétative des RBM et des HMM.</p>
+        <p>Une question centrale en neurosciences est de comprendre comment l’activité cérébrale se généralise d’un individu à l’autre. Les paradigmes classiques basés sur des tâches ou des stimuli s’appuient sur l’alignement anatomique et temporel des enregistrements cérébraux, ainsi que sur le moyennage des données. Ces stratégies se révèlent toute fois inefficaces pour étudier l’activité cérébrale spontanée, car aucun repère temporel commun ne relie les individus.</p>
+        <p>Dans cette thèse, nous proposons des modèles statistiques permettant de comparer l’activité neuronale spontanée chez la larve de poisson-zèbre. À l’aide de la microscopie fonctionnelle à feuille de lumière, nous enregistrons l’activité de l’ensemble du cerveau à résolution cellulaire et nous utilisons des Modèles de Markov ainsi que des Machines de Boltzmann Restreintes (Restricted Boltzmann Machines, RBM) pour générer des représentations interprétables du comportement et des dynamiques neuronales.</p>
+        <p>Nous commençons par modéliser la dynamique de réorientation de la larve de poisson-zèbre pendant la nage libre avec un Modèle de Markov caché (Hidden Markov Model, HMM) à trois états moteurs : avant, gauche et droite. Ce même HMM décrit l’activité de la région ARTR (Anterior Rhombencephalic Turning Region) et relie directement la dynamique neuronale au comportement. Nos résultats suggèrent qu’une activation bilatérale équilibrée de l’ARTR pourrait expliquer l’état "avant".</p>
+        <p>Nous développons ensuite deux procédures pour entraîner des RBMs capables de projeter l’activité neuronale de plusieurs poissons dans un espace latent commun. La première entraîne une RBM unique à partir de l’activité voxélisée et concaténée de plusieurs poissons. La seconde est un paradigme "enseignant-élève" où chaque RBM est entraînée sur un poisson unique, mais sont contraintes entre elles de manière à partager leurs unités cachées. Ces approches produisent une représentation commune qui permet de transférer fidèlement des motifs d’activité d’un individu à l’autre et révèle des régularités conservées entre cerveaux.</p>
+        <p>Nous exploitons enfin cet espace latent pour segmenter l’activité spontanée en états cérébraux discrets, et mesurer leurs transitions markoviennes. Nous constatons que les séquences d’états suivent des règles stéréotypées d’un animal à l’autre, ce qui confirme que l’activité spontanée encode des priors intrinsèques du calcul neural.</p>
+        <p>En conclusion, nos résultats montrent comment des modèles génératifs probabilistes peuvent surmonter la variabilité individuelle, et révéler des principes d’organisation communs entres cerveaux chez les vertébrés. La thèse fournit une boîte à outils pour comparer l’activité spontanée entre sujets et souligne la valeur interprétative des RBM et des HMM.</p>
       </div>
     </section>
 
@@ -107,7 +109,7 @@
     }
 
     // Carte Leaflet
-    const lat = 48.847889, lon = 2.3565;
+    const lat = 48.848022, lon = 2.356315;
     const map = L.map('map').setView([lat, lon], 16);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
